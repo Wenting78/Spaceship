@@ -40,7 +40,7 @@
 // ------------------------------------------------------------
 
 // Écris ton code ici 👇
-
+const distance=Number(prompt("Combien y-a-t-il de distance pour ce voyage en année-lumière?"));
 
 
 // ------------------------------------------------------------
@@ -53,7 +53,12 @@
 // ------------------------------------------------------------
 
 // Écris ton code ici 👇
-
+let voyageType = "";
+if(distance>50){
+  alert("🌌 Voyage long (mission intergalactique)");
+} else {
+  alert("🪐 Voyage court (proche système solaire)");
+};
 
 
 // ------------------------------------------------------------
@@ -62,7 +67,8 @@
 // ------------------------------------------------------------
 
 // Écris ton code ici 👇
-
+const fuelNeeded = distance * 3;
+console.log(fuelNeeded);
 
 
 // ------------------------------------------------------------
@@ -75,7 +81,13 @@
 // ------------------------------------------------------------
 
 // Écris ton code ici 👇
-
+let fuelMessage;
+if( fuelNeeded>300){
+    fuelMessage="⚠️ Trop de carburant, surcharge possible !";
+  }else{
+    fuelMessage="✅ Quantité de carburant acceptable"
+  };
+  
 
 
 // ------------------------------------------------------------
@@ -91,6 +103,16 @@
 
 // Écris ton code ici 👇
 
+let travellers = Number(prompt("Combien y-a-t-il de voyageurs ?"));
+if(travellers>5){
+  alert("Il y a trop de voyageur !!");
+  travellers = Number(prompt("Combien y-a-t-il de voyageurs ?"))};
+
+
+
+
+
+  
 
 
 // ------------------------------------------------------------
@@ -100,7 +122,17 @@
 // ------------------------------------------------------------
 
 // Écris ton code ici 👇
-
+const oxygenNeeded = travellers * distance * 0.5;
+console.log(oxygenNeeded);
 
 
 // 🏁 Quand toutes les étapes sont vertes : décollage autorisé !
+
+
+if(travellers>5){
+alert("Décollage non autorisé");
+} else if(distance>100){
+  alert("Décollage non autorisé");
+} else if(fuelNeeded>300){
+  alert("Décollage non autorisé");
+} else {alert("Décollage autorisé")};
